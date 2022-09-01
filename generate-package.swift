@@ -11,6 +11,10 @@ func packageString(url: String, checksum: String) -> String {
         products: [
             .library(name: "MatrixSDK", targets: ["MatrixSDK"])
         ],
+        dependencies: [
+            .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver", from: "1.9.5"),
+            .package(url: "https://github.com/realm/realm-swift.git", from: "10.27.0")
+        ],
         targets: [
             .binaryTarget(name: "MatrixSDK", url: "\(url)", checksum: "\(checksum)")
         ]
